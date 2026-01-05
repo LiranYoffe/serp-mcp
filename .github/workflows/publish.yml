@@ -32,6 +32,7 @@ jobs:
           sed -i "s/version = \"$VERSION\"/version = \"$NEW_VERSION\"/" pyproject.toml
           git add pyproject.toml
           git -c user.name='github-actions[bot]' -c user.email='github-actions[bot]@users.noreply.github.com' commit -m "Bump version to $NEW_VERSION [skip ci]"
+          git pull --rebase origin main
           git push
         else
           echo "new_version=$VERSION" >> $GITHUB_OUTPUT
