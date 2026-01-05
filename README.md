@@ -1,5 +1,9 @@
 # SERP MCP Server
 
+[![PyPI version](https://badge.fury.io/py/serp-mcp.svg)](https://pypi.org/project/serp-mcp/)
+[![Python versions](https://img.shields.io/pypi/pyversions/serp-mcp)](https://pypi.org/project/serp-mcp/)
+[![CI](https://github.com/LiranYoffe/serp-mcp/actions/workflows/publish.yml/badge.svg)](https://github.com/LiranYoffe/serp-mcp/actions)
+
 Google SERP scraper as a Model Context Protocol (MCP) server with fingerprint rotation.
 
 ## Features
@@ -28,21 +32,17 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-### Manual Installation
+### Manual Usage
 
 ```bash
-# Run with uvx (automatically installs latest version)
+# Run with uvx (automatically installs and runs the latest version)
 uvx serp-mcp
-
-# Or install globally
-uv pip install serp-mcp
-serp-mcp
 ```
 
 ### Development
 
 ```bash
-git clone https://github.com/yourusername/serp-mcp
+git clone https://github.com/LiranYoffe/serp-mcp
 cd serp-mcp
 uv sync
 uv run serp-mcp
