@@ -11,8 +11,8 @@ from typing import cast
 from fastmcp import FastMCP
 
 from serp_mcp.core import build_search_options
-from serp_mcp.types import CountryCode, LanguageCode
 from serp_mcp.scraper import search_full, search_lite
+from serp_mcp.types import CountryCode, LanguageCode
 
 mcp = FastMCP("serp-mcp")
 

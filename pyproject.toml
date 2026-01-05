@@ -50,6 +50,6 @@ dev = [
     "grpcio-tools>=1.76.0",
     "pytest>=9.0.2",
     "ruff>=0.6.0",
-    "mypy>=1.11.0",
+    "ty",
     "types-protobuf>=6.32.1.20251210",
 ]

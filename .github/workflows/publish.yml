@@ -47,8 +47,8 @@ jobs:
     - name: Run lint
       run: uv run ruff check .
 
-    - name: Run mypy
-      run: uv run mypy serp_mcp
+    - name: Run ty
+      run: uv run ty check serp_mcp
 
     - name: Build package
       run: uv build
