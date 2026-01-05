@@ -6,7 +6,7 @@ import base64
 from urllib.parse import urlencode
 
 from serp_mcp.types import SearchOptions, TimeRange
-from serp_mcp.uule_pb2 import Uule
+from serp_mcp.uule_pb2 import Uule  # type: ignore
 
 # Time range to tbs parameter mapping
 TIME_RANGE_TBS: dict[TimeRange, str] = {

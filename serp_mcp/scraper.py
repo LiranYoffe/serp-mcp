@@ -49,11 +49,11 @@ async def _fetch_search_html(
     """Fetch Google search HTML using Camoufox."""
     url = build_search_url(options)
 
-    async with AsyncCamoufox(
+    async with AsyncCamoufox(  # type: ignore
         headless=headless,
         geoip=False,
     ) as browser:
-        context = await browser.new_context()
+        context = await browser.new_context()  # type: ignore
         await context.route(NOT_GOOGLE_SEARCH_REGEX, lambda route: route.abort())
 
         page = await context.new_page()

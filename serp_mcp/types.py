@@ -157,6 +157,6 @@ class SearchResult(BaseModel):
     """Complete search result response."""
 
     organic: list[OrganicResult] = Field(default_factory=list)
-    people_also_ask: list[PeopleAlsoAsk] | None = None
-    related_searches: list[RelatedSearch] | None = None
+    people_also_ask: list[PeopleAlsoAsk] = Field(default_factory=list)
+    related_searches: list[RelatedSearch] = Field(default_factory=list)
     knowledge_graph: KnowledgeGraph | None = None

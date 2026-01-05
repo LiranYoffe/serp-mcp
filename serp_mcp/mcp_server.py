@@ -6,10 +6,12 @@ a search tool for performing Google searches with various options.
 """
 
 import json
+from typing import cast
 
 from fastmcp import FastMCP
 
 from serp_mcp.core import build_search_options
+from serp_mcp.types import CountryCode, LanguageCode
 from serp_mcp.scraper import search_full, search_lite
 
 mcp = FastMCP("serp-mcp")
@@ -49,8 +51,8 @@ async def search(
     try:
         options = build_search_options(
             query=query,
-            country=country,
-            language=language,
+            country=cast(CountryCode, country),
+            language=cast(LanguageCode, language),
             location=location,
             time_range=time_range,
             autocorrect=autocorrect,
@@ -61,7 +63,7 @@ async def search(
         if lite:
             result = await search_lite(options, headless=True)
         else:
-            result = await search_full(options, headless=True)
+            result = await search_full(options, headless=True)  # type: ignore [assignment]
 
         return json.dumps(result.model_dump(exclude_none=True), indent=2, ensure_ascii=False)
 
@@ -71,7 +73,7 @@ async def search(
         return f"Search error: {str(e)}"
 
 
-def main():
+def main() -> None:
     """Run MCP server with stdio transport."""
     mcp.run(transport="stdio")
 

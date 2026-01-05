@@ -16,7 +16,7 @@ Design principles:
 import html
 import json
 import re
-from typing import Any
+from typing import Any, cast
 from urllib.parse import unquote, urlparse
 
 from serp_mcp.types import (
@@ -116,7 +116,7 @@ def parse_search_results(html: str, query: str) -> SearchResult:
 # =============================================================================
 
 
-def extract_embedded_json(html: str) -> dict[str, list[Any]] | None:
+def extract_embedded_json(html: str) -> dict[str, list[Any]]:
     """
     Extract embedded JSON from Google SERP HTML.
 
@@ -148,7 +148,7 @@ def extract_embedded_json(html: str) -> dict[str, list[Any]] | None:
     if not json_data:
         raise ValueError("No embedded JSON data found in HTML")
 
-    return json_data
+    return cast(dict[str, list[Any]], json_data)
 
 
 def get_record_type(data: list[Any]) -> ResultType | None:
@@ -244,7 +244,6 @@ def extract_video_result(data: list[Any]) -> OrganicResult | None:
         title=title,
         link=url,
         snippet=snippet,
-        position=0,
         source=channel,
         result_type=ResultType.VIDEO,
         channel=channel,
