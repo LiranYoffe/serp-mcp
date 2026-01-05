@@ -32,6 +32,23 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
+### opencode
+
+Add to your `~/.config/opencode/opencode.jsonc`:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "serp-mcp": {
+      "type": "local",
+      "command": ["uvx", "serp-mcp"],
+      "enabled": true
+    }
+  }
+}
+```
+
 ### Manual Usage
 
 ```bash
