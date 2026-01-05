@@ -6,6 +6,21 @@
 
 Google SERP scraper as a Model Context Protocol (MCP) server with fingerprint rotation.
 
+---
+
+## Sponsored by
+
+<a href="https://quercle.dev">
+  <div style="width: 100%; height: 30vh; overflow: hidden; display: flex; align-items: center;">
+    <img src="https://quercle.dev/opengraph-image" alt="Quercle" style="width: 100%; height: 60vh; object-fit: cover; object-position: center;">
+  </div>
+</a>
+
+<p align="center">
+  <strong><a href="https://quercle.dev">Quercle</a></strong> - Stop wasting tokens on junk. Get exactly what your LLM needs.<br>
+  <em>Web Fetch & Search API that strips navigation, ads, and footers. Handles JS sites. Returns clean, cited content.</em>
+</p>
+
 ## Features
 
 - Automatic fingerprint rotation per request
@@ -17,19 +32,10 @@ Google SERP scraper as a Model Context Protocol (MCP) server with fingerprint ro
 
 ## Installation
 
-### Claude Desktop / Cursor
+### Claude Code
 
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "serp-mcp": {
-      "command": "uvx",
-      "args": ["serp-mcp"]
-    }
-  }
-}
+```bash
+claude mcp add serp-mcp -- uvx serp-mcp
 ```
 
 ### opencode
