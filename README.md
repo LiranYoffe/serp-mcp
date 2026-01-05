@@ -10,11 +10,11 @@ Google SERP scraper as a Model Context Protocol (MCP) server with fingerprint ro
 
 ## Sponsored by
 
-<a href="https://quercle.dev">
-  <div style="width: 100%; height: 30vh; overflow: hidden; display: flex; align-items: center;">
-    <img src="https://quercle.dev/opengraph-image" alt="Quercle" style="width: 100%; height: 60vh; object-fit: cover; object-position: center;">
-  </div>
-</a>
+<p align="center">
+  <a href="https://quercle.dev">
+    <img src="https://quercle.dev/opengraph-image" alt="Quercle" width="100%">
+  </a>
+</p>
 
 <p align="center">
   <strong><a href="https://quercle.dev">Quercle</a></strong> - Stop wasting tokens on junk. Get exactly what your LLM needs.<br>
