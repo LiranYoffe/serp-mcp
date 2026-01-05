@@ -1,7 +1,7 @@
 # SERP MCP Server
 
-[![PyPI version](https://img.shields.io/pypi/v/serp-mcp)](https://pypi.org/project/serp-mcp/)
-[![Python versions](https://img.shields.io/pypi/pyversions/serp-mcp)](https://pypi.org/project/serp-mcp/)
+[![PyPI version](https://img.shields.io/pypi/v/serp-mcp?style=flat)](https://pypi.org/project/serp-mcp/)
+[![Python versions](https://img.shields.io/pypi/pyversions/serp-mcp?style=flat)](https://pypi.org/project/serp-mcp/)
 [![CI](https://github.com/LiranYoffe/serp-mcp/actions/workflows/publish.yml/badge.svg)](https://github.com/LiranYoffe/serp-mcp/actions)
 
 Google SERP scraper as a Model Context Protocol (MCP) server with fingerprint rotation.
